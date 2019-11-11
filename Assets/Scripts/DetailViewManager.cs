@@ -40,8 +40,6 @@ public class DetailViewManager : ViewManager
 
     bool editMode = true;
 
-    
-
     void ToggleEditMode(bool updateInputField=false)
     {
         editMode = !editMode;
@@ -68,6 +66,7 @@ public class DetailViewManager : ViewManager
                 nameInputField.text = contactValue.name;
                 phoneNumberInputField.text = contactValue.phoneNumber;
                 emailInputField.text = contactValue.email;
+                PhotoButton.image.sprite = SpriteManager.GetSprite(contactValue.profilePhotoFileName);
             }
         }
     }
@@ -83,17 +82,20 @@ public class DetailViewManager : ViewManager
         rightNavgationViewButton.SetOnClickAction(() =>
         {
             ToggleEditMode();
+            PhotoButton.interactable = true;
         });
 
-        ScrollViewManager.detailPohto = (value) =>
-        {
-            PhotoButton.image.sprite = value.ProfilePhotoSprite;
-        };
+        //ScrollViewManager.detailPohto = (value) =>
+        //{
+        //    PhotoButton.image.sprite = value.ProfilePhotoSprite;
+        //};
     }
 
     private void Start() 
     {
         ToggleEditMode();
+
+        PhotoButton.interactable = false;
     }
 
     private void OnDestroy()
@@ -111,7 +113,9 @@ public class DetailViewManager : ViewManager
         newContact.name = nameInputField.text;
         newContact.phoneNumber = phoneNumberInputField.text;
         newContact.email = emailInputField.text;
-        
+        if (PhotoButton.image.sprite)
+            newContact.profilePhotoFileName = PhotoButton.image.sprite.name;
+
         saveDelegate?.Invoke(newContact);
 
         ToggleEditMode(true);
@@ -119,10 +123,13 @@ public class DetailViewManager : ViewManager
 
     public void OnClickPhoto()
     {
-        
         AddPhotoPopupViewManager addPhotoPopupViewManager
             = Instantiate(addPhotoPopupViewPrefab, transform.parent.parent).GetComponent<AddPhotoPopupViewManager>();
         addPhotoPopupViewManager.Open();
 
+        addPhotoPopupViewManager.didSelectImage = (sprite) =>
+        {
+            PhotoButton.image.sprite = sprite;
+        };
     }
 }

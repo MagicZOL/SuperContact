@@ -165,13 +165,9 @@ MonoBehaviour:
   phoneNumberInputField: {fileID: 3019625017056890982}
   emailInputField: {fileID: 1399642456763261407}
   saveButton: {fileID: 1697692653100115398}
-  thirdViewPrefab: {fileID: 893227375399353740, guid: f758a5c2eb1d23844b62ffe4ea394592,
-    type: 3}
   addPhotoPopupViewPrefab: {fileID: 4093587450579236137, guid: acd572a37dc67014eb2f1f27c4174da9,
     type: 3}
   PhotoButton: {fileID: 2012040332416207704}
-  scrollViewManager: {fileID: 4246581516188621899, guid: 42ea17d5a475a3b40aa1e74908add4fe,
-    type: 3}
 --- !u!95 &1866633052749566467
 Animator:
   serializedVersion: 3
@@ -519,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1335468154779224417
