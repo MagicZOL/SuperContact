@@ -9,7 +9,7 @@ public class AddPopupViewManager : PopupViewManager
     [SerializeField] InputField nameInputField;
     [SerializeField] InputField phoneNumberInputField;
     [SerializeField] InputField emailInputField;
-    [SerializeField] Image profilePhotoImage;
+    [SerializeField] ImageButton profilePhotoImageButton;
 
     [SerializeField] GameObject addPhotoPopupViewPrefab;
 
@@ -24,14 +24,13 @@ public class AddPopupViewManager : PopupViewManager
         addPhotoPopupViewManager.Open(AnimationType.TYPE2);
         addPhotoPopupViewManager.didSelectImage = (sprite) =>
         {
-            profilePhotoImage.sprite = sprite;
+            profilePhotoImageButton.Image = sprite;
         };
     }
 
     protected override void Awake()
     {
         base.Awake();
-        Debug.Log("자식의 Start()");
     }
 
     private void OnEnable()
@@ -76,8 +75,8 @@ public class AddPopupViewManager : PopupViewManager
             contact.phoneNumber = phoneNumber;
             contact.email = email;
     
-            if (profilePhotoImage.sprite)
-                contact.profilePhotoFileName = profilePhotoImage.sprite.name;
+            if (profilePhotoImageButton.Image)
+                contact.profilePhotoFileName = profilePhotoImageButton.Image.name;
 
             // Main 화면에 Contact 객체 전달
             addContactCallback(contact);

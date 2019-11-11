@@ -70,7 +70,6 @@ public class DetailViewManager : ViewManager
                 phoneNumberInputField.text = contactValue.phoneNumber;
                 emailInputField.text = contactValue.email;
 
-                //사진출력
                 profilePhotoImageButton.Image = SpriteManager.GetSprite(contactValue.profilePhotoFileName);
             }
         }
