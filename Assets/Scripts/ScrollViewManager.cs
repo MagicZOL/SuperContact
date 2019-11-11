@@ -37,11 +37,9 @@ public class ScrollViewManager : ViewManager, ICell
             addPopupViewManager.addContactCallback = (contact) =>
             {
                 AddContact(contact);
-                // AddCell(contact, contacts.Value.contactList.Count - 1);
 
                 ClearCell();
-                LoadData();
-                
+                LoadData();                
             };
 
             // AddPopupViewManager 열기
@@ -102,6 +100,8 @@ public class ScrollViewManager : ViewManager, ICell
     {
         Cell cell = Instantiate(cellPrefab, content).GetComponent<Cell>();
         cell.Title = contact.name;
+        cell.ProfilePhotoSprite = SpriteManager.GetSprite(contact.profilePhotoFileName);
+
         cell.cellDelegate = this;
         cellList.Add(cell);
 

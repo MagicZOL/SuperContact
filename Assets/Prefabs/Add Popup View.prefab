@@ -1619,9 +1619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53694b7a51ffae149906ca6b186c7b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationType: 0
   nameInputField: {fileID: 4093587450116845670}
   phoneNumberInputField: {fileID: 4093587450328896430}
   emailInputField: {fileID: 4093587448623368335}
+  profilePhotoImage: {fileID: 6070099037108840866}
   addPhotoPopupViewPrefab: {fileID: 4093587450579236137, guid: acd572a37dc67014eb2f1f27c4174da9,
     type: 3}
 --- !u!114 &4093587450579236139

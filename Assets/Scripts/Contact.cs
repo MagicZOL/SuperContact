@@ -16,6 +16,7 @@ public struct Contact : IComparable<Contact>
     public string name;
     public string phoneNumber;
     public string email;
+    public string profilePhotoFileName;
 
     public int CompareTo(Contact other)
     {

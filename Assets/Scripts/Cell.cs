@@ -13,6 +13,8 @@ public class Cell : MonoBehaviour
 {
     [SerializeField] Text title;
     [SerializeField] Button deleteButton;
+    [SerializeField] Image profilePhoto;
+
     public ICell cellDelegate;
     Button cellButton;
 
@@ -26,6 +28,18 @@ public class Cell : MonoBehaviour
         {
             // title에 대한 유효성 체크
             this.title.text = value;
+        }
+    }
+
+    public Sprite ProfilePhotoSprite
+    {
+        get
+        {
+            return this.profilePhoto.sprite;
+        }
+        set
+        {
+            this.profilePhoto.sprite = value;
         }
     }
 
