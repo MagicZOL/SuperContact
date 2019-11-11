@@ -165,6 +165,8 @@ MonoBehaviour:
   emailInputField: {fileID: 1399642456763261407}
   saveButton: {fileID: 1697692653100115398}
   profilePhotoImageButton: {fileID: 1433445494742930008}
+  imageButton: {fileID: 6907455504303407446, guid: 6e8ef618981e72f479688e0b1c117365,
+    type: 3}
 --- !u!95 &1866633052749566467
 Animator:
   serializedVersion: 3

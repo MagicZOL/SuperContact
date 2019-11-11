@@ -69,7 +69,6 @@ public class DetailViewManager : ViewManager
                 nameInputField.text = contactValue.name;
                 phoneNumberInputField.text = contactValue.phoneNumber;
                 emailInputField.text = contactValue.email;
-
                 profilePhotoImageButton.Image = SpriteManager.GetSprite(contactValue.profilePhotoFileName);
             }
         }
@@ -91,7 +90,7 @@ public class DetailViewManager : ViewManager
 
     private void Start() 
     {
-        ToggleEditMode();
+        ToggleEditMode(); 
     }
 
     private void OnDestroy()

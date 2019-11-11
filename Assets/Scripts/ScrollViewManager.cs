@@ -8,7 +8,7 @@ public class ScrollViewManager : ViewManager, ICell
     [SerializeField] GameObject addPopupViewPrefab;
     [SerializeField] GameObject detailViewPrefab;
     [SerializeField] GameObject confirmPopupViewPrefab;
-    [SerializeField] GameObject imageButton;
+    [SerializeField] ImageButton imageButton;
 
     [SerializeField] RectTransform content;
 
@@ -108,7 +108,7 @@ public class ScrollViewManager : ViewManager, ICell
         cell.ProfilePhotoSprite = SpriteManager.GetSprite(contact.profilePhotoFileName);
         if(cell.ProfilePhotoSprite==null)
         {
-            cell.ProfilePhotoSprite = imageButton.GetComponent<ImageButton>().Image;
+            cell.ProfilePhotoSprite = imageButton.Image;
         }
         cell.cellDelegate = this;
         cellList.Add(cell);
