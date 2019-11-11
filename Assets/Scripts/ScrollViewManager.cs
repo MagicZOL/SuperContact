@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class ScrollViewManager : ViewManager, ICell
 {
     [SerializeField] GameObject cellPrefab;
@@ -19,6 +19,7 @@ public class ScrollViewManager : ViewManager, ICell
     // Cell 편집 버튼 관련 변수
     bool isEditable = false;
 
+    public static Action<Cell> detailPohto;
     private void Awake() 
     {
         // Title 지정
@@ -159,6 +160,7 @@ public class ScrollViewManager : ViewManager, ICell
             Contact selectedContact = contacts.Value.contactList[cellIndex];
             detailViewManager.contact = selectedContact;
 
+            detailPohto(cell);
             detailViewManager.saveDelegate = (newContact) =>
             {
                 contacts.Value.contactList[cellIndex] = newContact;

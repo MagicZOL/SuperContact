@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public static class SCInputField
 {
     public static void SetImmutable(this InputField inputField, bool editMode)
@@ -31,6 +31,8 @@ public class DetailViewManager : ViewManager
     [SerializeField] InputField emailInputField;
     [SerializeField] Button saveButton;
     [SerializeField] GameObject thirdViewPrefab;
+    [SerializeField] GameObject addPhotoPopupViewPrefab;
+    [SerializeField] Button PhotoButton;
 
     public delegate void DetailViewManagerSaveDelegate(Contact contact);
     public DetailViewManagerSaveDelegate saveDelegate;
@@ -38,6 +40,8 @@ public class DetailViewManager : ViewManager
     public Contact? contact;
 
     bool editMode = true;
+
+    
 
     void ToggleEditMode(bool updateInputField=false)
     {
@@ -81,6 +85,11 @@ public class DetailViewManager : ViewManager
         {
             ToggleEditMode();
         });
+
+        ScrollViewManager.detailPohto = (value) =>
+        {
+            PhotoButton.image.sprite = value.ProfilePhotoSprite;
+        };
     }
 
     private void Start() 
@@ -103,7 +112,7 @@ public class DetailViewManager : ViewManager
         newContact.name = nameInputField.text;
         newContact.phoneNumber = phoneNumberInputField.text;
         newContact.email = emailInputField.text;
-
+        
         saveDelegate?.Invoke(newContact);
 
         ToggleEditMode(true);
@@ -115,5 +124,14 @@ public class DetailViewManager : ViewManager
             Instantiate(thirdViewPrefab).GetComponent<ThirdViewManager>();
 
         mainManager.PresentViewManager(thirdViewManager);
+    }
+
+    public void OnClickPhoto()
+    {
+        
+        AddPhotoPopupViewManager addPhotoPopupViewManager
+            = Instantiate(addPhotoPopupViewPrefab, transform.parent.parent).GetComponent<AddPhotoPopupViewManager>();
+        addPhotoPopupViewManager.Open();
+
     }
 }
