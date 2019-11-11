@@ -164,9 +164,7 @@ MonoBehaviour:
   phoneNumberInputField: {fileID: 3019625017056890982}
   emailInputField: {fileID: 1399642456763261407}
   saveButton: {fileID: 1697692653100115398}
-  addPhotoPopupViewPrefab: {fileID: 4093587450579236137, guid: acd572a37dc67014eb2f1f27c4174da9,
-    type: 3}
-  PhotoButton: {fileID: 2012040332416207704}
+  profilePhotoImageButton: {fileID: 1433445494742930008}
 --- !u!95 &1866633052749566467
 Animator:
   serializedVersion: 3
@@ -491,8 +489,9 @@ GameObject:
   - component: {fileID: 1335468154779224417}
   - component: {fileID: 8593079037641606565}
   - component: {fileID: 2012040332416207704}
+  - component: {fileID: 1433445494742930008}
   m_Layer: 5
-  m_Name: PhotoButton
+  m_Name: ImageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,8 +596,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 893227375399353744}
-        m_MethodName: OnClickPhoto
+      - m_Target: {fileID: 1433445494742930008}
+        m_MethodName: Onclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -608,6 +607,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1433445494742930008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961335951534002214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c12584d5cf1d3a4fa6cf765ec39eb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonImage: {fileID: 8786938582192738966}
+  addPhotoPopupViewPrefab: {fileID: 4093587450579236137, guid: acd572a37dc67014eb2f1f27c4174da9,
+    type: 3}
 --- !u!1 &3431897701543682149
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be9292a722ab1a846826202709c53797, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
