@@ -30,7 +30,7 @@ ZLContact를 처음 이용하시는분은 환영메시지를 받아보실 수 �
 실수를 방지하기 위하여 삭제하기 전에 확인메시지를 띄워줍니다 <br>
  </ul>
 
- <ul>5. 화면에 따른 버튼 활성 / 비활성화
+ <ul>5. 화면에 따른 버튼 활성 / 비활성화 <br>
  어떤 화면인지에 따라 버튼이 상황에 맞게 바뀝니다<br>
  </ul>
 
@@ -69,12 +69,12 @@ You can click a person's contact to see their phone number, e-mail as well as th
 You can modify the added contacts by clicking the Edit button.<br>
 </ul>
 
-<ul>4. Remove Contacts> <br>
+<ul>4. Remove Contacts <br>
 You can delete contacts that need to be deleted by clicking the Edit button <br>
 To prevent mistakes, send a confirmation message before deleting it is deleted <br>
 </ul>
 
-<ul>5. Button active/disabled according to screen
+<ul>5. Button active/disabled according to screen <br>
 The button changes to context depending on which screen it is on.<br>
 </ul>
 
