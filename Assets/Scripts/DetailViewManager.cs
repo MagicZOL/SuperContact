@@ -40,8 +40,6 @@ public class DetailViewManager : ViewManager
 
     bool editMode = true;
 
-    
-
     void ToggleEditMode(bool updateInputField=false)
     {
         editMode = !editMode;
@@ -84,11 +82,6 @@ public class DetailViewManager : ViewManager
         {
             ToggleEditMode();
         });
-
-        ScrollViewManager.detailPohto = (value) =>
-        {
-            PhotoButton.image.sprite = value.ProfilePhotoSprite;
-        };
     }
 
     private void Start() 
@@ -119,10 +112,8 @@ public class DetailViewManager : ViewManager
 
     public void OnClickPhoto()
     {
-        
         AddPhotoPopupViewManager addPhotoPopupViewManager
             = Instantiate(addPhotoPopupViewPrefab, transform.parent.parent).GetComponent<AddPhotoPopupViewManager>();
         addPhotoPopupViewManager.Open();
-
     }
 }
