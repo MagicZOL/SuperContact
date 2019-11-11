@@ -39,6 +39,7 @@ public class AddPhotoPopupViewManager : PopupViewManager
 
                 didSelectImage?.Invoke(selectedSprite);
 
+                Debug.Log(selectedSprite);
                 Close();
             });
         }
