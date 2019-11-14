@@ -4,9 +4,9 @@
 안녕하세요
 Unity를 이용하여 만든 모바일 연락처 입니다.
 
-***ZLSuperContact 디자인 소개*** / ***Introduction to Switch Design***
+***ZLSuperContact 디자인 소개*** / ***Introduction to ZLSuperContact Design***
 
-![switch](./Image/ContactGIF.gif)
+![switch](./Image/GIF.gif)
 
 ***
 **기능소개**
