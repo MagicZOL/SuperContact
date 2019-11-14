@@ -4,6 +4,7 @@
 안녕하세요
 Unity를 이용하여 만든 모바일 연락처 입니다.
 
+***
 ***ZLSuperContact 디자인 소개*** / ***Introduction to ZLSuperContact Design***
 
 ![switch](./Image/GIF.gif)
@@ -34,18 +35,18 @@ ZLContact를 처음 이용하시는분은 환영메시지를 받아보실 수 �
  어떤 화면인지에 따라 버튼이 상황에 맞게 바뀝니다<br>
  </ul>
 
-___
+***
 
 #### ZLSuperContact를 사용해보세요!
 
-___
+***
 
 궁금한 점 및 요청사항은 아래 이메일을 참고해주세요<br>
 구글 이메일 tnwls9721@gmil.com<br>
 네이버 이메일 chfhrtorthsk@naver.com<br>
 
 ***
-##Engilsh
+## Engilsh
 
 # ZLSuperContact
 **Mobile Contacts with Unity**
@@ -78,10 +79,11 @@ To prevent mistakes, send a confirmation message before deleting it is deleted <
 The button changes to context depending on which screen it is on.<br>
 </ul>
 
-___
+***
 
 Try #ZLSuperContact!
-___
+
+***
 
 Please refer to the email below for questions and requests.<br>
 Google Email tnwls9721@gmil.com<br>
