@@ -51,7 +51,7 @@ public class ImageButton : MonoBehaviour
         if(addPhotoPopupViewPrefab)
         {
             AddPhotoPopupViewManager addPhotoPopupViewManager 
-                = Instantiate(addPhotoPopupViewPrefab, MainManager.Instance.transform).GetComponent<AddPhotoPopupViewManager>();
+                = Instantiate(addPhotoPopupViewPrefab, NavigationManager.Instance.transform).GetComponent<AddPhotoPopupViewManager>();
 
             addPhotoPopupViewManager.Open(PopupViewManager.AnimationType.TYPE2);
             addPhotoPopupViewManager.didSelectImage = (sprite) =>

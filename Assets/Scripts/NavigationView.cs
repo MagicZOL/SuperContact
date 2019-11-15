@@ -9,7 +9,7 @@ public class NavigationView : MonoBehaviour
     [SerializeField] RectTransform leftButtonArea;
     [SerializeField] RectTransform rightButtonArea;
     [SerializeField] GameObject backButton;
-    [SerializeField] MainManager mainManager;
+    [SerializeField] NavigationManager mainManager;
 
     // Navigation View의 가운데 Text 값을 변경하는 속성
     public string Title

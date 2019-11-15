@@ -6,7 +6,7 @@ public class AlertPopupViewManager : PopupViewManager
 {
     public void OnClcikOK()
     {
-        MainManager manager = GameObject.Find("Canvas").GetComponent<MainManager>();
+        NavigationManager manager = GameObject.Find("Canvas").GetComponent<NavigationManager>();
 
         Close();
     }

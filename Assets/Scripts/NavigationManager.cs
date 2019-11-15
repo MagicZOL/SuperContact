@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainManager : MonoBehaviour
+public class NavigationManager : MonoBehaviour
 {
     // Prefab
     [SerializeField] GameObject alertPopupViewPrefab;   // 첫 실행시 나타날 Popup 창 Prefab
@@ -16,11 +16,11 @@ public class MainManager : MonoBehaviour
     Stack<ViewManager> viewManagers = new Stack<ViewManager>();
 
     //싱글턴 만들기
-    public static MainManager Instance;
+    public static NavigationManager Instance;
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -40,13 +40,13 @@ public class MainManager : MonoBehaviour
         }
 
         // Scroll View 만들어서 화면에 배치
-        ScrollViewManager scrollViewManager = 
+        ScrollViewManager scrollViewManager =
             Instantiate(scrollViewPrefab, transform).GetComponent<ScrollViewManager>();
         PresentViewManager(scrollViewManager);
     }
 
     // 새로운 화면 Content에 표시하기
-    public void PresentViewManager(ViewManager viewManager, bool isAnimated=false)
+    public void PresentViewManager(ViewManager viewManager, bool isAnimated = false)
     {
         viewManager.transform.SetParent(content);
         viewManager.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
@@ -69,7 +69,7 @@ public class MainManager : MonoBehaviour
         if (viewManager.rightNavgationViewButton)
         {
             viewManager.rightNavgationViewButton.transform.SetParent(navigationView.RightButtonArea);
-            viewManager.rightNavgationViewButton.GetComponent<RectTransform>().anchoredPosition 
+            viewManager.rightNavgationViewButton.GetComponent<RectTransform>().anchoredPosition
                 = Vector2.zero;
             viewManager.rightNavgationViewButton.GetComponent<RectTransform>().sizeDelta
                 = Vector2.zero;
@@ -80,9 +80,9 @@ public class MainManager : MonoBehaviour
         if (viewManager.leftNavgationViewButton)
         {
             viewManager.leftNavgationViewButton.transform.SetParent(navigationView.LeftButtonArea);
-            viewManager.leftNavgationViewButton.GetComponent<RectTransform>().anchoredPosition 
+            viewManager.leftNavgationViewButton.GetComponent<RectTransform>().anchoredPosition
                 = Vector2.zero;
-            viewManager.leftNavgationViewButton.GetComponent<RectTransform>().sizeDelta 
+            viewManager.leftNavgationViewButton.GetComponent<RectTransform>().sizeDelta
                 = Vector2.zero;
             viewManager.leftNavgationViewButton.GetComponent<RectTransform>().localScale
                 = Vector3.one;
@@ -110,7 +110,7 @@ public class MainManager : MonoBehaviour
     }
 
     // 마지막 화면 Content에서 제거하기
-    public void DismissViewManager(bool isAnimated=false)
+    public void DismissViewManager(bool isAnimated = false)
     {
         ViewManager viewManager = viewManagers.Pop();
 
