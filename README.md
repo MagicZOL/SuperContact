@@ -7,7 +7,7 @@ Unity를 이용하여 만든 모바일 연락처 입니다.
 ***
 ***ZLSuperContact 디자인 소개*** / ***Introduction to ZLSuperContact Design***
 
-![switch](./Image/GIF.gif)
+![ZLSuperContact](./Image/GIF.gif)
 
 ***
 **기능소개**
@@ -88,4 +88,7 @@ The button changes to context depending on which screen it is on.<br>
 Please refer to the email below for questions and requests.<br>
 Google Email tnwls9721@gmil.com<br>
 Naver E-mail chfhrtorthsk@naver.com<br>
+
+***
+
 ![anima](./Image/anima.png)
